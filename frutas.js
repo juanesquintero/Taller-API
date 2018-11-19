@@ -5,8 +5,6 @@ var app = new function () {
   // array.splice(posicion, 1, valor); Modificar un solo item del array
   // array.splice(posicion, 1); Eliminar un solo item del array
 
-  var id
-
   function loadFruits() {
     var xmlhttp = new XMLHttpRequest() //libreria-clase para hacer solicitudes
     var url = "http://127.0.0.1:5000/fruits"
@@ -67,7 +65,7 @@ var app = new function () {
     console.log(name,image)
 
     var xmlhttp = new XMLHttpRequest() 
-    var url = "http://127.0.0.1:5000/fruits"
+    var url = "http://127.0.0.1:5000/fruits/post"
     xmlhttp.open("POST", url, true)
     xmlhttp.setRequestHeader('Content-type','application/json; charset=utf-8')
     xmlhttp.send(JSON.stringify({id: ":v"  ,nombre:name, imagen:image}))
