@@ -13,6 +13,11 @@ fruits = [
 ]
 
 #Get
+@app.route("/")
+def get():
+    return "Fruits API"
+
+#Get
 @app.route("/fruits")
 def allFruits():
     return jsonify({'fruits': fruits})
