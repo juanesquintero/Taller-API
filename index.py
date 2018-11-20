@@ -34,7 +34,7 @@ def getFruit(fruit_id):
 
 #Post 
 @app.route("/fruits", methods=['POST'])
-def createFruit():
+def postFruit():
     #Agregar elemento a un array
     id = 0
     for fruit in fruits:
@@ -52,9 +52,9 @@ def putFruit(fruit_id):
     for myFruit in fruits:
         if myFruit['id']== fruit_id:
             print("PUT")
-            print(fruits[i])
+            #print(fruits[i])
             fruits[i]=request.json
-            print(fruits[i])
+            #print(fruits[i])
         i+=1
     return jsonify(fruits)
 
